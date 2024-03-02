@@ -7,6 +7,12 @@ const HomePage = lazy(() =>
   })),
 )
 
+const CollectorsProfilePage = lazy(() =>
+  import('../../src/pages/CollectorsProfile').then((module) => ({
+    default: module.CollectorsProfile,
+  })),
+)
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -16,8 +22,8 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: '/gallery',
-        element: <h1>Hello Gallery</h1>,
+        path: '/collector',
+        element: <CollectorsProfilePage />,
       },
     ],
   },
