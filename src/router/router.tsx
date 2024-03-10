@@ -7,6 +7,12 @@ const HomePage = lazy(() =>
   })),
 )
 
+const WhitelistPage = lazy(() =>
+  import('../../src/pages/Whitelist').then((module) => ({
+    default: module.Whitelist,
+  })),
+)
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -18,6 +24,10 @@ export const router = createBrowserRouter([
       {
         path: '/gallery',
         element: <h1>Hello Gallery</h1>,
+      },
+      {
+        path: '/whitelist',
+        element: <WhitelistPage />,
       },
     ],
   },
