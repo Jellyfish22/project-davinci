@@ -6,7 +6,7 @@ const getConfig = () => {
     return local
   }
   // TODO: Change to production URL
-  if (location.hostname.includes('davinci.com')) {
+  if (location.hostname.includes('https://project-davinci-six.vercel.app/')) {
     return production
   }
   throw new Error("env: There's no config for this environment, please check your env config files.")
